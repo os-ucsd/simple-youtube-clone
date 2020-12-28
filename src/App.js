@@ -18,7 +18,7 @@ class App extends React.Component {
     const {searchQuery} = this.state;
     // Replace all spaces with %20
     let updatedQuery = searchQuery.replace(" ", "%20");
-    const url = 'https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=' + updatedQuery + '&key=AIzaSyDBsfuvZL3EC8sGC86ksdycgsDhWHQSq4Y';
+    const url = 'https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=' + updatedQuery + '&key=[YOUR_API_KEY]';
     fetch(url)
       .then(resp => resp.json())
       // Note: we're only going to store the first 5 results (5 results per page) in this example
